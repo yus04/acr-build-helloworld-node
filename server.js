@@ -1,12 +1,11 @@
 const http = require('http')
+const html = require('fs').readFileSync('views/index.html');
 
 const port = 80
 
 const server = http.createServer((request, response) => {
-  response.writeHead(200, {'Content-Type': 'text/plain'})
-  response.write('Hello World\n')
-  response.write('I like cat\n')
-  response.end('Version: ' + process.env.NODE_VERSION + '\n')
+  response.writeHead(200,{'Content-Type':'text/html'});
+  response.end(html);
 })
 
 server.listen(port)
