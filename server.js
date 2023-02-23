@@ -1,5 +1,5 @@
 const http = require('http')
-const html = require('fs').readFileSync('views/index.html');
+const html = require('fs').readFileSync('index.html');
 
 const port = 80
 
